@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Juego Javascript</title>
+    <style>
+      #canvas {
+        position: relative;
+        width: 1200px;
+        height: 710px;
+        border: 1px solid black;
+        overflow: hidden;
+        background: url("img/carretera.png") repeat-x;
+        background-size: cover;
+      }
+
+      #puntuacion-container {
+        position: absolute;
+        width: 125px;
+        top: 20px;
+        right: 20px;
+        /* background-color: rgba(0, 191, 255, 0.519); */
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .containerJR {
+        position: absolute;
+        width: 125px;
+        bottom: 20px;
+        right: 20px;
+        /* background-color: rgba(0, 191, 255, 0.519); */
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      #puntuacion {
+        color: white;
+        font-size: 15px;
+        margin: 0;
+      }
+      body{
+        background-color: rgb(42, 42, 42);
+      }
+    </style>
+  </head>
+
+  <body >
+    <div id="puntuacion-container">
+      <div>
+        <img src="img/Logo UCB sinLetras.png" alt="" height="100px" />
+      </div>
+
+      <p id="puntuacion">Puntuación: 0</p>
+      <div>
+        <p id="maximo" style='color:white'>Maximo: 0</p>
+      </div>
+    </div>
+
+    <center>
+      <div id="canvas">
+        <img
+          id="autoJugador"
+          src="img/auto.png"
+          style="position: absolute; bottom: 400px; left: 300px; z-index: 500"
+        />
+      </div>
+    </center>
+    <div
+      id="modal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: white;
+          padding: 20px;
+          border-radius: 5px;
+          text-align: center;
+        "
+      >
+        <h2>Perdiste</h2>
+        <p>Reintentar?</p>
+        <button id="reintentarBtn">Reintentar</button>
+      </div>
+    </div>
+    <!-- <audio src="audio/240.mp3" autoplay loop></audio> -->
+    <script src="teclado.js"></script>
+    <script src="motor.js"></script>
+  </body>
+</html>
